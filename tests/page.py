@@ -1,4 +1,4 @@
-from locators import LoginPageLocators, MainPageLocators, AddNewLocators
+from locators import LoginPageLocators, MainPageLocators, AddNewPageLocators
 
 
 class BasePage(object):
@@ -36,7 +36,7 @@ class LoginPage(BasePage):
         submitBttn = self.driver.find_element(*LoginPageLocators.SUBMIT)
         submitBttn.click()
         
-    # login to addressbook app    
+    # filling login form    
     def login(self, user, password):
         self.set_login(user)
         self.set_password(password)
@@ -105,11 +105,11 @@ class PageNavi(BasePage):
 class AddNew(BasePage):
     ''' Page Add New '''   
     def set_address(self, address):
-        addrElement = self.driver.find_element(*AddNewLocators.ADDRESS)
+        addrElement = self.driver.find_element(*AddNewPageLocators.ADDRESS)
         addrElement.send_keys(address)
         
     def click_next(self):
-        self.driver.find_element(*AddNewLocators.NEXT).click()
+        self.driver.find_element(*AddNewPageLocators.NEXT).click()
             
     def fill_address(self, address):
         self.set_address(address)
@@ -117,17 +117,17 @@ class AddNew(BasePage):
         
     ''' Add New - Second Page '''
     def set_first_name(self, firstname):
-        addrElement = self.driver.find_element(*AddNewLocators.FIRSTNAME)
+        addrElement = self.driver.find_element(*AddNewPageLocators.FIRSTNAME)
         addrElement.clear()
         addrElement.send_keys(firstname)
     
     def set_middle_name(self, middlename):
-        addrElement = self.driver.find_element(*AddNewLocators.MIDDLENAME)
+        addrElement = self.driver.find_element(*AddNewPageLocators.MIDDLENAME)
         addrElement.clear()
         addrElement.send_keys(middlename)
     
     def set_last_name(self, lastname):
-        addrElement = self.driver.find_element(*AddNewLocators.LASTNAME)
+        addrElement = self.driver.find_element(*AddNewPageLocators.LASTNAME)
         addrElement.clear()
         addrElement.send_keys(lastname)
         
@@ -138,28 +138,28 @@ class AddNew(BasePage):
         self.set_last_name(lastname)
     """ """
     def set_email(self, email):
-        addrElement = self.driver.find_element(*AddNewLocators.EMAIL)
+        addrElement = self.driver.find_element(*AddNewPageLocators.EMAIL)
         addrElement.clear()
         addrElement.send_keys(email)
             
     def set_phone(self, phone):
-        addrElement = self.driver.find_element(*AddNewLocators.PH_HOME)
+        addrElement = self.driver.find_element(*AddNewPageLocators.PH_HOME)
         addrElement.clear()
         addrElement.send_keys(phone)
             
     def click_enter(self):
-        next_btn = self.driver.find_element(*AddNewLocators.ENTER)
+        next_btn = self.driver.find_element(*AddNewPageLocators.ENTER)
         next_btn.click()
 
 class MainPage(BasePage):
     def search_element(self,email):
         search_elem = self.driver.find_element(*MainPageLocators.SEARCH)
         search_elem.send_keys(email)
-    
+    """
     def select_element(self):
         select_elem = self.driver.find_element(*MainPageLocators.SEL_All)
         select_elem.click()
-    
+    """
     def select_all_element(self):
         select_elem = self.driver.find_element(*MainPageLocators.SEL_All)
         select_elem.click()
@@ -174,7 +174,3 @@ class MainPage(BasePage):
             alert.accept()
         except:
             print "no alert to accept"
-
-    
-    
-    

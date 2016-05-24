@@ -40,7 +40,7 @@ class AddressbookTestCase(unittest.TestCase):
         page_navi.navigation()
     
     
-    def test_add_new_and_delete(self): 
+    def test_add_new_record_and_delete_it(self): 
         self.test_login_smoketest() # login to addressbook
         add_new_lnk = page.PageNavi(self.driver)
         add_new_lnk.add_lnk() #click on add new link 
