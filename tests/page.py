@@ -131,12 +131,12 @@ class AddNew(BasePage):
         addrElement.clear()
         addrElement.send_keys(lastname)
         
-    """Filling random user name  etc. """
+    """Filling random user name  """
     def fill_user_name(self, firstname, middlename, lastname):
         self.set_first_name(firstname)
         self.set_middle_name(middlename)
         self.set_last_name(lastname)
-    """ """
+    
     def set_email(self, email):
         addrElement = self.driver.find_element(*AddNewPageLocators.EMAIL)
         addrElement.clear()
