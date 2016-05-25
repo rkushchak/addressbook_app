@@ -26,7 +26,7 @@ class AddressbookTestCase(unittest.TestCase):
         self.l_name = random_test_data.random_letters(7) # generate Last name
     
     ''' Tests'''
-    def test_login_smoketest(self):
+    def test_login_page(self):
         login_page = page.LoginPage(self.driver)
         self.assertTrue(login_page.is_title(), "addressbook application title doesn't match.")
         login_page.login(self.user, self.password)
@@ -35,13 +35,13 @@ class AddressbookTestCase(unittest.TestCase):
     
         
     def test_navi(self): 
-        self.test_login_smoketest()   
+        self.test_login_page()   
         page_navi = page.PageNavi(self.driver)
         page_navi.navigation()
     
     
     def test_add_new_record_and_delete_it(self): 
-        self.test_login_smoketest() # login to addressbook
+        self.test_login_page() # login to addressbook
         add_new_lnk = page.PageNavi(self.driver)
         add_new_lnk.add_lnk() #click on add new link 
         
