@@ -35,6 +35,3 @@ class AddressbookLoginTestCase(unittest.TestCase):
         
     def tearDown(self):
         self.driver.close()
-        
-     
-    

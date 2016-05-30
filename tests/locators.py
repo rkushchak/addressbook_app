@@ -27,9 +27,6 @@ class MainPageLocators(object):
     DELETE = (By.XPATH,'.//*[@id="content"]/form[2]/div[2]/input')
     ''' Check boxes'''
     SEL_All  = (By.XPATH,'.//*[@id="MassCB"]')
-    
-    
-    
 
 class AddNewPageLocators(object):
     ADDRESS = (By.XPATH, 'id("content")/x:form/x:textarea') #'//textarea[@name="address"]')
