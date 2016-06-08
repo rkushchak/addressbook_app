@@ -33,7 +33,7 @@ class LoginPage(BasePage):
     
     # Define the login button
     def click_submit(self):
-        submitBttn = self.driver.find_element(*LoginPageLocators.SUBMIT)
+        submitBttn =self.driver.find_element(*LoginPageLocators.SUBMIT)
         submitBttn.click()
         
     # filling login form    
@@ -41,7 +41,7 @@ class LoginPage(BasePage):
         self.set_login(user)
         self.set_password(password)
         #self.click_submit()
-        
+                
 
 class PageNavi(BasePage):
     ''' Page navigation links'''
@@ -155,11 +155,11 @@ class MainPage(BasePage):
     def search_element(self,email):
         search_elem = self.driver.find_element(*MainPageLocators.SEARCH)
         search_elem.send_keys(email)
-    """
+    
     def select_element(self):
-        select_elem = self.driver.find_element(*MainPageLocators.SEL_All)
+        select_elem = self.driver.find_element(*MainPageLocators.SELECT_ELM)
         select_elem.click()
-    """
+    
     def select_all_element(self):
         select_elem = self.driver.find_element(*MainPageLocators.SEL_All)
         select_elem.click()

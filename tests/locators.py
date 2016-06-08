@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 class LoginPageLocators(object):
     """A class for login page locators. All login page locators should come here"""
     #locators
@@ -27,6 +28,8 @@ class MainPageLocators(object):
     DELETE = (By.XPATH,'.//*[@id="content"]/form[2]/div[2]/input')
     ''' Check boxes'''
     SEL_All  = (By.XPATH,'.//*[@id="MassCB"]')
+    SELECT_ELM = (By.XPATH,'//input[contains(@accept,"")]')
+    
 
 class AddNewPageLocators(object):
     ADDRESS = (By.XPATH, 'id("content")/x:form/x:textarea') #'//textarea[@name="address"]')
