@@ -1,8 +1,3 @@
-'''
-Created on Jun 7, 2016
-
-@author: rkushchak
-'''
 import random_test_data
 
 

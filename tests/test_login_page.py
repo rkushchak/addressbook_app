@@ -8,20 +8,18 @@ from page import LoginPage
 import unittest
 from selenium import webdriver
 import properties
-
+import base_testcase
 
 user = properties.user #user = 'admin'
 password = properties.password #password = 'secret' 
 _url = properties._url #_url = "http://localhost/index.php"
 
-class LoginTest(unittest.TestCase):
+class LoginTest(base_testcase.LoginTest):
     
     def setUp(self):
         self.driver = webdriver.Chrome()
         #self.driver.set_window_size(1380, 880)
         self.driver.get(_url)   
-        
-
     def test_login_page(self):
         login_page = LoginPage(self.driver)
         login_page.login(user, password)

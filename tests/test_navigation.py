@@ -6,7 +6,7 @@ Created on Jun 6, 2016
 
 import unittest
 from selenium import webdriver
-from tests import properties
+import properties
 from page import LoginPage,PageNavi
 
 #user = properties.user

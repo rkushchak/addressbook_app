@@ -5,7 +5,7 @@ Created on Jun 6, 2016
 '''
 from page import LoginPage,MainPage,PageNavi,AddNew
 import random_test_data
-from tests import properties
+import properties
 
 import unittest
 from selenium import webdriver
@@ -20,8 +20,8 @@ class Add_Remove_Test(unittest.TestCase):
         self.login_page.click_submit()
             
         
-    def test_login(self):
-        self.login_page
+    #def test_login(self):
+        #self.login_page
         
     
     def test_delete_new_record(self): 

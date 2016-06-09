@@ -22,7 +22,7 @@ def suite():
 
 import time
 import HTMLTestRunner
-def run(suite, report = "/home/rkushchak/workspace/addressbook/tests/reports/test_reports_%s.html" % time.asctime()):
+def run(suite, report = "./tests/reports/test_reports_%s.html" % time.asctime()):
         with open(report, "w") as f:
             HTMLTestRunner.HTMLTestRunner(
                     stream = f,
