@@ -78,7 +78,7 @@ def suite():
         s1 = unittest.TestLoader().loadTestsFromTestCase(Tests)
         return unittest.TestSuite([s1])
 '''
-#This function declares the Test Results and stores them in /home/rkushchak/workspace/addressbook/tests/reports
+#This function declares the Test Results and stores them in /current_project/tests/reports
 def run(suite, report = "./tests/reports/test_reports_%s.html" % time.asctime()):
     with open(report, "w") as f:
         HTMLTestRunner.HTMLTestRunner(
