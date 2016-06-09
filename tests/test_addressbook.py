@@ -84,8 +84,8 @@ def suite():
         s2 = unittest.TestLoader().loadTestsFromTestCase(AddressbookTests)
         return unittest.TestSuite([s1,s2])
 
-#This function declares the Test Results and stores them in /home/rkushchak/workspace/addressbook/tests/reports
-def run(suite, report = "/home/rkushchak/workspace/addressbook/tests/reports/test_reports_%s.html" % time.asctime()):
+#This function declares the Test Results and stores them in /current_project/tests/reports
+def run(suite, report = "./tests/reports/test_reports_%s.html" % time.asctime()):
     with open(report, "w") as f:
         HTMLTestRunner.HTMLTestRunner(
                     stream = f,
