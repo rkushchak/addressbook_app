@@ -11,7 +11,7 @@ import test_delete_new_record
 from selenium import webdriver
 import sys
 
-browsers = {"firefox": webdriver.Firefox, "chrome": webdriver.Chrome, "safari": webdriver.Safari}
+#browsers = {"firefox": webdriver.Firefox, "chrome": webdriver.Chrome, "safari": webdriver.Safari}
 
 def suite():
     return unittest.TestSuite((\
@@ -32,10 +32,10 @@ def run(suite, report = "./tests/reports/test_reports_%s.html" % time.asctime())
                     ).run(suite)
 
 if __name__ == "__main__":
-    
-    browsername = "chrome"
-    if len(sys.argv) == 2:
-        browsername = sys.argv[1].lower()
-    browser = browsers[browsername]
     unittest.main(run(suite()))
+    #browsername = "chrome"
+    #if len(sys.argv) == 2:
+    #    browsername = sys.argv[1].lower()
+    #browser = browsers[browsername]
+    
     
